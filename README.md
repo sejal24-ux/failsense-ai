@@ -55,168 +55,169 @@ Business Impact Estimation
 Recovery Strategy Simulation
        ↓
 AI Investigation Report
+```
 
-Key Features
-1. Transaction Monitoring
+# Key Features
+
+## 1. Transaction Monitoring
+
 The system analyzes payment transaction data and tracks:
 
-Transaction status
+- Transaction status
+- Payment method
+- Bank
+- Transaction amount
+- Timestamp
+- Failure patterns
 
-Payment method
+## 2. Failure Fingerprinting
 
-Bank
-
-Transaction amount
-
-Timestamp
-
-Failure patterns
-
-2. Failure Fingerprinting
 Each payment failure is converted into a structured failure fingerprint using attributes such as:
 
-Payment method
-
-Bank
-
-Failure category
-
-Failure reason
+- Payment method
+- Bank
+- Failure category
+- Failure reason
 
 Example:
 
-
+```text
 UPI_Bank_A_BANK_AUTHORIZATION_TIMEOUT
+```
+
 This helps group similar payment failures.
 
-3. Anomaly Detection
+## 3. Anomaly Detection
+
 FailSense AI compares normal payment failure behavior with the observed failure rate inside time windows.
 
 The system identifies abnormal spikes using anomaly scores.
 
 Example:
 
-
+```text
 Normal Failure Rate: 2.6%
-
 Incident Failure Rate: 11.28%
-
 Maximum Anomaly Score: 5.28
-4. Incident Detection
+```
+
+## 4. Incident Detection
+
 When the failure rate crosses the configured anomaly threshold, the system creates an incident.
 
 Example:
 
-
+```text
 Incident ID: INC-2026-001
 Status: ACTIVE
 Severity: HIGH
+```
+
 The incident includes:
 
-Incident window
+- Incident window
+- Affected transactions
+- Failed transactions
+- Failure rate
+- Maximum anomaly score
 
-Affected transactions
+## 5. Severity Classification
 
-Failed transactions
-
-Failure rate
-
-Maximum anomaly score
-
-5. Severity Classification
 Incidents are classified according to their observed impact.
 
-Example:
+Possible severity levels:
 
-
+```text
 LOW
 MEDIUM
 HIGH
 CRITICAL
+```
+
 This allows operational teams to prioritize serious payment incidents.
 
-6. Root Cause Analysis
+## 6. Root Cause Analysis
+
 The system analyzes failure fingerprints to identify the dominant probable failure pattern.
 
 Example:
 
-
+```text
 Primary Failure Pattern:
 UPI_Bank_A_BANK_AUTHORIZATION_TIMEOUT
+```
+
 The system also provides:
 
-Root cause confidence
-
-Pattern share
-
-Matching failures
+- Root cause confidence
+- Pattern share
+- Matching failures
 
 Example:
 
-
+```text
 Root Cause Confidence: 57.73%
 Pattern Share: 12.88%
 Matching Failures: 184
-7. Business Impact Estimation
+```
+
+## 7. Business Impact Estimation
+
 FailSense AI estimates the transaction value affected by the incident.
 
 Example:
 
-
+```text
 Affected Transactions: 2066
 Failed Transactions: 233
 Transaction Value at Risk: ₹400,717.56
+```
+
 This helps translate technical payment failures into business impact.
 
-Recovery Strategy Simulator
+## 8. Recovery Strategy Simulator
+
 The system compares multiple recovery strategies and estimates their potential recovery impact.
 
 Strategies include:
 
-Strategy	Estimated Recovery
-Do Nothing	25%
-Retry After Delay	40%
-Offer Alternative Payment	55%
-Dynamic Routing	65%
+| Strategy | Estimated Recovery |
+|---|---:|
+| Do Nothing | 25% |
+| Retry After Delay | 40% |
+| Offer Alternative Payment | 55% |
+| Dynamic Routing | 65% |
 
 For the simulated incident, the recommended strategy is:
 
-
+```text
 Dynamic Routing
+```
+
 The simulator estimates potential recovered transaction value based on the recovery rate.
 
-Recovery percentages are prototype estimates used for simulation. No real payment routing or financial transaction is performed.
+> Recovery percentages are prototype estimates used for simulation. No real payment routing or financial transaction is performed.
 
-AI Investigation Report
+## 9. AI Investigation Report
+
 FailSense AI combines all investigation components into a structured report.
 
 The report contains:
 
-Incident summary
+- Incident summary
+- Incident severity
+- Incident window
+- Failure rate comparison
+- Anomaly score
+- Affected transactions
+- Primary failure pattern
+- Root cause confidence
+- Pattern share
+- Transaction value at risk
+- Recovery strategy comparison
+- Recommended recovery strategy
 
-Incident severity
-
-Incident window
-
-Failure rate comparison
-
-Anomaly score
-
-Affected transactions
-
-Primary failure pattern
-
-Root cause confidence
-
-Pattern share
-
-Transaction value at risk
-
-Recovery strategy comparison
-
-Recommended recovery strategy
-
-
+---
 
 # Dashboard
 
@@ -323,66 +324,50 @@ Compare different recovery strategies.
 
 Recommend the strategy with the highest estimated recovery impact.
 
+---
 
-Incident Analysis Workflow
-FailSense AI follows the following investigation workflow:
+# Technology Stack
 
-Step 1 — Detect
-Monitor payment transactions and identify abnormal failure-rate spikes.
+## Programming Language
 
-Step 2 — Investigate
-Analyze the affected time window and identify the dominant failure patterns.
+- Python
 
-Step 3 — Diagnose
-Determine the probable root cause using failure fingerprints.
+## Data Processing
 
-Step 4 — Quantify
-Estimate affected transactions and transaction value at risk.
+- Pandas
+- NumPy
 
-Step 5 — Recover
-Compare different recovery strategies.
+## Machine Learning / Analytics
 
-Step 6 — Recommend
-Recommend the strategy with the highest estimated recovery impact.
+- Scikit-learn
+- Statistical anomaly detection
+- Failure fingerprinting
 
-Technology Stack
-Programming Language
-Python
+## Backend
 
-Data Processing
-Pandas
+- FastAPI
+- Uvicorn
 
-NumPy
+## Dashboard
 
-Machine Learning / Analytics
-Scikit-learn
+- Streamlit
 
-Statistical anomaly detection
+## Visualization
 
-Failure fingerprinting
+- Matplotlib
+- Streamlit charts
 
-Backend
-FastAPI
+## Development
 
-Uvicorn
+- Git
+- GitHub
+- Python Virtual Environment
 
-Dashboard
-Streamlit
+---
 
-Visualization
-Matplotlib
+# Project Structure
 
-Streamlit charts
-
-Development
-Git
-
-GitHub
-
-Python Virtual Environment
-
-Project Structure
-
+```text
 failsense-ai/
 │
 ├── backend/
@@ -424,70 +409,98 @@ failsense-ai/
 ├── requirements.txt
 ├── .gitignore
 └── README.md
-Installation
-Clone the repository:
+```
 
-Bash
+---
 
+# Installation
+
+## Clone the repository
+
+```bash
 git clone https://github.com/sejal24-ux/failsense-ai.git
-Navigate to the project:
+```
 
-Bash
+## Navigate to the project
 
+```bash
 cd failsense-ai
-Create a virtual environment:
+```
 
-Bash
+## Create a virtual environment
 
+```bash
 python3 -m venv venv
-Activate the virtual environment:
+```
 
-macOS / Linux
-Bash
+## Activate the virtual environment
 
+### macOS / Linux
+
+```bash
 source venv/bin/activate
-Windows
-Bash
+```
 
+### Windows
+
+```bash
 venv\Scripts\activate
-Install dependencies:
+```
 
-Bash
+## Install dependencies
 
+```bash
 pip install -r requirements.txt
-Running the Project
-Start the Backend
+```
+
+---
+
+# Running the Project
+
+## Start the Backend
+
 From the project root:
 
-Bash
-
+```bash
 uvicorn backend.main:app --reload
+```
+
 The FastAPI backend will start locally.
 
-Start the Dashboard
+## Start the Dashboard
+
 Open another terminal and run:
 
-Bash
-
+```bash
 cd failsense-ai
 source venv/bin/activate
 streamlit run dashboard/app.py
+```
+
 The Streamlit dashboard will open in the browser.
 
-API Endpoints
+---
+
+# API Endpoints
+
 The backend provides APIs for interacting with the payment intelligence system.
 
 Important endpoints include:
 
-
+```text
 GET /transactions
 GET /investigation
-The /transactions endpoint provides transaction data for dashboard analytics and filtering.
+```
 
-The /investigation endpoint provides the incident investigation report.
+The `/transactions` endpoint provides transaction data for dashboard analytics and filtering.
 
-Example Investigation
+The `/investigation` endpoint provides the incident investigation report.
 
+---
+
+# Example Investigation
+
+```text
 Incident ID:
 INC-2026-001
 
@@ -526,86 +539,80 @@ Transaction Value at Risk:
 
 Recommended Recovery Strategy:
 Dynamic Routing
-Prototype Scope
+```
+
+---
+
+# Prototype Scope
+
 FailSense AI currently uses synthetic payment transaction data for demonstration and experimentation.
 
 The project does not:
 
-Process real payments
-
-Move real money
-
-Perform real payment routing
-
-Connect to production banking systems
-
-Execute real recovery actions
+- Process real payments
+- Move real money
+- Perform real payment routing
+- Connect to production banking systems
+- Execute real recovery actions
 
 Recovery percentages and business impact calculations are prototype estimates.
 
-Future Improvements
+---
+
+# Future Improvements
+
 Potential future enhancements include:
 
-Real-time payment event ingestion
+- Real-time payment event ingestion
+- Streaming anomaly detection
+- Advanced ML-based root cause classification
+- Payment gateway integrations
+- Bank and payment-method health monitoring
+- Automated alerting
+- Historical incident comparison
+- Real-time recovery optimization
+- Production-grade observability
+- Authentication and role-based access control
 
-Streaming anomaly detection
+---
 
-Advanced ML-based root cause classification
+# Learning Outcomes
 
-Payment gateway integrations
-
-Bank and payment-method health monitoring
-
-Automated alerting
-
-Historical incident comparison
-
-Real-time recovery optimization
-
-Production-grade observability
-
-Authentication and role-based access control
-
-Learning Outcomes
 Through this project, the following concepts were implemented:
 
-Payment failure analysis
+- Payment failure analysis
+- Data preprocessing
+- Feature engineering
+- Failure fingerprinting
+- Anomaly detection
+- Incident detection
+- Root cause analysis
+- Business impact analysis
+- Recovery strategy optimization
+- FastAPI backend development
+- Streamlit dashboard development
+- Git and GitHub workflow
 
-Data preprocessing
+---
 
-Feature engineering
+# GitHub
 
-Failure fingerprinting
-
-Anomaly detection
-
-Incident detection
-
-Root cause analysis
-
-Business impact analysis
-
-Recovery strategy optimization
-
-FastAPI backend development
-
-Streamlit dashboard development
-
-Git and GitHub workflow
-
-GitHub
 Repository:
 
 https://github.com/sejal24-ux/failsense-ai
 
-Disclaimer
+---
+
+# Disclaimer
+
 FailSense AI is a prototype built using synthetic payment transaction data for educational and demonstration purposes.
 
 No real-money transactions are processed.
 
-Author
-Sejal Kumari
+---
 
-FailSense AI — Payment Failure Intelligence & Recovery Copilot
+# Author
 
+**Sejal Kumari**
 
+**FailSense AI — Payment Failure Intelligence & Recovery Copilot**
