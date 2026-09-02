@@ -295,6 +295,34 @@ The AI Investigation Report combines incident detection, root-cause analysis, bu
 
 ---
 
+# Incident Analysis Workflow
+
+FailSense AI follows the following investigation workflow:
+
+## Step 1 — Detect
+
+Monitor payment transactions and identify abnormal failure-rate spikes.
+
+## Step 2 — Investigate
+
+Analyze the affected time window and identify the dominant failure patterns.
+
+## Step 3 — Diagnose
+
+Determine the probable root cause using failure fingerprints.
+
+## Step 4 — Quantify
+
+Estimate affected transactions and transaction value at risk.
+
+## Step 5 — Recover
+
+Compare different recovery strategies.
+
+## Step 6 — Recommend
+
+Recommend the strategy with the highest estimated recovery impact.
+
 
 Incident Analysis Workflow
 FailSense AI follows the following investigation workflow:
