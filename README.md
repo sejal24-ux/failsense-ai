@@ -216,6 +216,8 @@ Recovery strategy comparison
 
 Recommended recovery strategy
 
+
+
 # Dashboard
 
 The FailSense AI dashboard provides an interactive interface for monitoring transactions, investigating incidents, analyzing root causes, and comparing recovery strategies.
@@ -224,7 +226,7 @@ The FailSense AI dashboard provides an interactive interface for monitoring tran
 
 The System Overview provides a high-level view of payment system health, including transaction volume, failure metrics, and system status.
 
-![System Overview](https://github.com/sejal24-ux/failsense-ai/blob/main/screenshots/01_system_overview.png?raw=true)
+<img src="./screenshots/01_system_overview.png" alt="System Overview" width="900">
 
 ---
 
@@ -232,7 +234,7 @@ The System Overview provides a high-level view of payment system health, includi
 
 Transaction Analytics provides visual insights into transaction status, payment-method failures, bank-level failures, and transaction-level exploration.
 
-![Transaction Analytics](https://github.com/sejal24-ux/failsense-ai/blob/main/screenshots/02_transaction_analytics.png?raw=true)
+<img src="./screenshots/02_transaction_analytics.png" alt="Transaction Analytics" width="900">
 
 The Transaction Explorer allows users to filter transactions by:
 
@@ -246,7 +248,7 @@ The Transaction Explorer allows users to filter transactions by:
 
 The Active Incident section displays detected incidents with severity, incident status, affected transactions, failure rate, and incident window.
 
-![Active Incident](https://github.com/sejal24-ux/failsense-ai/blob/main/screenshots/03_active_incident.png?raw=true)
+<img src="./screenshots/03_active_incident.png" alt="Active Incident" width="900">
 
 ---
 
@@ -254,7 +256,7 @@ The Active Incident section displays detected incidents with severity, incident 
 
 The Root Cause Analysis section identifies the dominant probable failure pattern and provides supporting confidence and pattern-share metrics.
 
-![Root Cause Analysis](https://github.com/sejal24-ux/failsense-ai/blob/main/screenshots/04_root_cause_analysis.png?raw=true)
+<img src="./screenshots/04_root_cause_analysis.png" alt="Root Cause Analysis" width="900">
 
 ---
 
@@ -262,7 +264,7 @@ The Root Cause Analysis section identifies the dominant probable failure pattern
 
 The Recovery Strategy Simulator compares possible recovery actions and estimates their potential recovery impact.
 
-![Recovery Strategy](https://github.com/sejal24-ux/failsense-ai/blob/main/screenshots/05_recovery_strategy.png?raw=true)
+<img src="./screenshots/05_recovery_strategy.png" alt="Recovery Strategy Simulator" width="900">
 
 The simulator compares:
 
@@ -281,15 +283,15 @@ The AI Investigation Report combines incident detection, root-cause analysis, bu
 
 ### Investigation Report — Top
 
-![AI Investigation Report Top](https://raw.githubusercontent.com/sejal24-ux/failsense-ai/main/screenshots/06_ai_investigation_report_top.png)
+<img src="./screenshots/06_ai_investigation_report_top.png" alt="AI Investigation Report Top" width="900">
 
 ### Investigation Report — Middle
 
-![AI Investigation Report Middle](https://raw.githubusercontent.com/sejal24-ux/failsense-ai/main/screenshots/07_ai_investigation_report_middle.png)
+<img src="./screenshots/07_ai_investigation_report_middle.png" alt="AI Investigation Report Middle" width="900">
 
 ### Investigation Report — Bottom
 
-![AI Investigation Report Bottom](https://raw.githubusercontent.com/sejal24-ux/failsense-ai/main/screenshots/08_ai_investigation_report_bottom.png)
+<img src="./screenshots/08_ai_investigation_report_bottom.png" alt="AI Investigation Report Bottom" width="900">
 
 ---
 
