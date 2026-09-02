@@ -281,15 +281,17 @@ The AI Investigation Report combines incident detection, root-cause analysis, bu
 
 ### Investigation Report — Top
 
-![AI Investigation Report Top](https://github.com/sejal24-ux/failsense-ai/blob/main/screenshots/06_ai_investigation_report_top.png?raw=true)
+![AI Investigation Report Top](https://raw.githubusercontent.com/sejal24-ux/failsense-ai/main/screenshots/06_ai_investigation_report_top.png)
 
 ### Investigation Report — Middle
 
-![AI Investigation Report Middle](https://github.com/sejal24-ux/failsense-ai/blob/main/screenshots/07_ai_investigation_report_middle.png?raw=true)
+![AI Investigation Report Middle](https://raw.githubusercontent.com/sejal24-ux/failsense-ai/main/screenshots/07_ai_investigation_report_middle.png)
 
 ### Investigation Report — Bottom
 
-![AI Investigation Report Bottom](https://github.com/sejal24-ux/failsense-ai/blob/main/screenshots/08_ai_investigation_report_bottom.png?raw=true)
+![AI Investigation Report Bottom](https://raw.githubusercontent.com/sejal24-ux/failsense-ai/main/screenshots/08_ai_investigation_report_bottom.png)
+
+---
 
 
 Incident Analysis Workflow
