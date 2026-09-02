@@ -216,58 +216,82 @@ Recovery strategy comparison
 
 Recommended recovery strategy
 
-Dashboard
+# Dashboard
+
 The FailSense AI dashboard provides an interactive interface for monitoring transactions, investigating incidents, analyzing root causes, and comparing recovery strategies.
 
-System Overview
+## System Overview
+
 The System Overview provides a high-level view of payment system health, including transaction volume, failure metrics, and system status.
 
-<img src="./screenshots/01_system_overview.png" alt="System Overview">
-Transaction Analytics
+![System Overview](https://github.com/sejal24-ux/failsense-ai/blob/main/screenshots/01_system_overview.png?raw=true)
+
+---
+
+## Transaction Analytics
+
 Transaction Analytics provides visual insights into transaction status, payment-method failures, bank-level failures, and transaction-level exploration.
 
-<img src="./screenshots/02_transaction_analytics.png" alt="Transaction Analytics">
+![Transaction Analytics](https://github.com/sejal24-ux/failsense-ai/blob/main/screenshots/02_transaction_analytics.png?raw=true)
+
 The Transaction Explorer allows users to filter transactions by:
 
-Payment Status
+- Payment Status
+- Payment Method
+- Bank
 
-Payment Method
+---
 
-Bank
+## Active Incident
 
-Active Incident
 The Active Incident section displays detected incidents with severity, incident status, affected transactions, failure rate, and incident window.
 
-<img src="./screenshots/03_active_incident.png" alt="Active Incident">
-Root Cause Analysis
+![Active Incident](https://github.com/sejal24-ux/failsense-ai/blob/main/screenshots/03_active_incident.png?raw=true)
+
+---
+
+## Root Cause Analysis
+
 The Root Cause Analysis section identifies the dominant probable failure pattern and provides supporting confidence and pattern-share metrics.
 
-<img src="./screenshots/04_root_cause_analysis.png" alt="Root Cause Analysis">
-Recovery Strategy Simulator
+![Root Cause Analysis](https://github.com/sejal24-ux/failsense-ai/blob/main/screenshots/04_root_cause_analysis.png?raw=true)
+
+---
+
+## Recovery Strategy Simulator
+
 The Recovery Strategy Simulator compares possible recovery actions and estimates their potential recovery impact.
 
-<img src="./screenshots/05_recovery_strategy.png" alt="Recovery Strategy">
+![Recovery Strategy](https://github.com/sejal24-ux/failsense-ai/blob/main/screenshots/05_recovery_strategy.png?raw=true)
+
 The simulator compares:
 
-Do Nothing
-
-Retry After Delay
-
-Offer Alternative Payment
-
-Dynamic Routing
+- Do Nothing
+- Retry After Delay
+- Offer Alternative Payment
+- Dynamic Routing
 
 The system recommends the strategy with the highest estimated recovery impact.
 
-AI Investigation Report
+---
+
+## AI Investigation Report
+
 The AI Investigation Report combines incident detection, root-cause analysis, business impact, and recovery recommendations into a structured investigation.
 
-Investigation Report — Top
-<img src="./screenshots/06_ai_investigation_report_top.png" alt="AI Investigation Report Top">
-Investigation Report — Middle
-<img src="./screenshots/07_ai_investigation_report_middle.png" alt="AI Investigation Report Middle">
-Investigation Report — Bottom
-<img src="./screenshots/08_ai_investigation_report_bottom.png" alt="AI Investigation Report Bottom">
+### Investigation Report — Top
+
+![AI Investigation Report Top](https://github.com/sejal24-ux/failsense-ai/blob/main/screenshots/06_ai_investigation_report_top.png?raw=true)
+
+### Investigation Report — Middle
+
+![AI Investigation Report Middle](https://github.com/sejal24-ux/failsense-ai/blob/main/screenshots/07_ai_investigation_report_middle.png?raw=true)
+
+### Investigation Report — Bottom
+
+![AI Investigation Report Bottom](https://github.com/sejal24-ux/failsense-ai/blob/main/screenshots/08_ai_investigation_report_bottom.png?raw=true)
+
+
 Incident Analysis Workflow
 FailSense AI follows the following investigation workflow:
 
